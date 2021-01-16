@@ -31,6 +31,7 @@ public class MedidorUI implements Observer
     private TextView infoIp;
     private TextView infoNivel;
     private TextView infoMac;
+    private TextView txfTitulo;
 
     public MedidorUI(int vista) throws ExceptionInInitializerError{
         this.dbMedidor
@@ -53,6 +54,7 @@ public class MedidorUI implements Observer
         infoIp          = (TextView) Misc.getInstance().mainActivity.findViewById(R.id.infoIp        );
         infoNivel       = (TextView) Misc.getInstance().mainActivity.findViewById(R.id.infoNivel     );
         infoMac         = (TextView) Misc.getInstance().mainActivity.findViewById(R.id.infoMac       );
+        txfTitulo       = (TextView) Misc.getInstance().mainActivity.findViewById(R.id.txfTitulo     );
 
         if(cobertura.length%2 != 0 || colores.length() != cobertura.length/2)
             throw Error.OnConstsError(cobertura.length, colores.length());
@@ -101,6 +103,7 @@ public class MedidorUI implements Observer
         this.infoIp.setText(Formatter.formatIpAddress(Integer.parseInt(info.getProperty("ip"))));
         this.infoNivel.setText(info.getProperty("nivel"));
         this.infoMac.setText(info.getProperty("mac"));
+        this.txfTitulo.setText(info.getProperty("ssid"));
     }
 
     public void limpiar() {
