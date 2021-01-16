@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actividades.MainActivity">
+
+    <com.ekn.gruzer.gaugelibrary.HalfGauge
+        android:id="@+id/dbMedidor"
+        android:layout_width="0dp"
+        android:layout_height="344dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.ekn.gruzer.gaugelibrary.HalfGauge>
+
+    <TextView
+        android:id="@+id/txfDbm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dbMedidor" />
+
+    <TextView
+        android:id="@+id/txfTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dbMedidor" />
+
+    <Button
+        android:id="@+id/btnPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="PAUSE"
+        app:layout_constraintBottom_toBottomOf="@+id/dbMedidor"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutHeaders"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txfDbm">
+
+        <TextView
+            android:id="@+id/txfEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Estado del WIFI" />
+
+        <TextView
+            android:id="@+id/txfFrecuencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Frecuencia" />
+
+        <TextView
+            android:id="@+id/txfVelocidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Velocidad de enlace" />
+
+        <TextView
+            android:id="@+id/txfSsid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="SSID" />
+
+        <TextView
+            android:id="@+id/txfIp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Dirección IP" />
+
+        <TextView
+            android:id="@+id/txfNivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Nivel de Señal" />
+
+        <TextView
+            android:id="@+id/txfMac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Dirección Mac" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layoutHeaders"
+        app:layout_constraintTop_toBottomOf="@+id/txfDbm">
+
+        <TextView
+            android:id="@+id/infoEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Sin Datos" />
+
+        <TextView
+            android:id="@+id/infoFrecuencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Sin Datos" />
+
+        <TextView
+            android:id="@+id/infoVelocidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Sin Datos" />
+
+        <TextView
+            android:id="@+id/infoSsid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Sin Datos" />
+
+        <TextView
+            android:id="@+id/infoIp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Sin Datos" />
+
+        <TextView
+            android:id="@+id/infoNivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Sin Datos" />
+
+        <TextView
+            android:id="@+id/infoMac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingVertical="@dimen/tablaVerticalPadding"
+            android:text="Sin Datos" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnFormula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Hallar potencia en miliwatts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeaders" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

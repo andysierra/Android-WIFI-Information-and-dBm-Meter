@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Proyecto final Redes Inalámbricas</string>
+
+    <string name="consts_error">
+        [ERROR]\nCONSTS.xml no tiene los valores de
+        cobertura o colores adecuados, ambos arrays deben ser de longitud par y
+        el array coloresMedidor debe tener la mitad de tamaño del array cobertura
+    </string>
+
+    <string name="permiso_wifi_error">
+        No permitiste a la app leer datos del wifi. Habrán datos no disponibles.
+    </string>
+</resources>

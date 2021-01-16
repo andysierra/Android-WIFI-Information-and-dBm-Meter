@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VALORES POR DEFECTO DE LA APLICACIÓN -->
+
+<resources>
+
+    <!-- MEDIDAS DE COBERTURA DE SEÑAL EN dBm -->
+    <integer-array name="cobertura">
+        <item>-120</item>
+        <item>-80</item>
+        <item>-80</item>
+        <item>-70</item>
+        <item>-70</item>
+        <item>-67</item>
+        <item>-67</item>
+        <item>-60</item>
+        <item>-60</item>
+        <item>-50</item>
+        <item>-50</item>
+        <item>-30</item>
+        <item>-30</item>
+        <item>0</item>
+    </integer-array>
+
+    <!-- COLORES DE COBERTURA -->
+    <array name="coloresMedidor">
+        <item name="desconectado">#880000</item>
+        <item name="pesima">#cc3300</item>
+        <item name="baja">#ff9966</item>
+        <item name="media">#ffcc00</item>
+        <item name="aceptable">#99cc33</item>
+        <item name="buena">#339900</item>
+        <item name="cercano">#5588ff</item>
+    </array>
+
+    <!-- ESTADOS DE WIFI -->
+    <array name="estadoWifi">
+        <item name="deshabilitando">Deshabilitando...</item>
+        <item name="deshabilitado">Deshabilitado</item>
+        <item name="habilitando">Habilitando...</item>
+        <item name="habilitado">Habilitado</item>
+        <item name="desconocido">Desconocido</item>
+    </array>
+
+</resources>
