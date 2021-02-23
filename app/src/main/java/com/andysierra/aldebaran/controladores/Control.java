@@ -3,6 +3,7 @@ package com.andysierra.aldebaran.controladores;
 import android.view.View;
 
 import com.andysierra.aldebaran.modelos.Medidor;
+import com.andysierra.aldebaran.vistas.Beeper;
 import com.andysierra.aldebaran.vistas.FormulaUI;
 import com.andysierra.aldebaran.vistas.MedidorUI;
 import com.andysierra.aldebaran.R;
@@ -12,14 +13,17 @@ public class Control
     private static final String TAG="Control";
     private MedidorUI medidorUI;
     private FormulaUI dialogoUI;
+    private Beeper beeper;
     private Medidor medidor;
 
     public Control() {
         this.medidorUI= new MedidorUI(R.id.dbMedidor);
         this.dialogoUI= new FormulaUI();
+        this.beeper = new Beeper(-120,0);
         this.medidor = new Medidor(500);
         this.medidor.addObserver(this.medidorUI);
         this.medidor.addObserver(this.dialogoUI);
+        this.medidor.addObserver(this.beeper);
 
         prepararEventos();
     }

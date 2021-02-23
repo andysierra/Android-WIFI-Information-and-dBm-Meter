@@ -1,6 +1,8 @@
 package com.andysierra.aldebaran.modelos;
 
 import android.content.Context;
+import android.media.AudioManager;
+import android.media.ToneGenerator;
 import android.net.wifi.SupplicantState;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
